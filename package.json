@@ -1,0 +1,19 @@
+{
+  "name": "avg-calci", 
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm start --prefix client",
+    "server": "npm start --prefix server",
+    "client-install": "npm install --prefix client",
+    "server-install": "npm install --prefix server",
+    "install": "npm run client-install && npm run server-install",
+    "build": "npm run build --prefix client",
+    "dev": "concurrently \"npm run server-dev\" \"npm run client\"",
+    "server-dev": "npm run dev --prefix server"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.0"  
+  }
+}
